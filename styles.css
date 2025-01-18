@@ -1,0 +1,80 @@
+body {
+    background-color: #252b2b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.game-container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: none;
+    border: solid #efdfc5;
+    font-size: 36pt;
+    font-weight: bold;
+    font-family: cursive;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.cell.taken {
+    color: #dc2011;
+    cursor: default;
+}
+
+#restart {
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #efdfc5;
+    border: none;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #efdfc5;
+    font-family: cursive;
+}
+
+#cell1 {border-width: 0px 5px 5px 0px;}
+#cell2 {border-width: 0px 5px 5px 5px;}
+#cell3 {border-width: 0px 0px 5px 5px;}
+#cell4 {border-width: 5px 5px 5px 0px;}
+#cell5 {border-width: 5px 5px 5px 5px;}
+#cell6 {border-width: 5px 0px 5px 5px;}
+#cell7 {border-width: 5px 5px 0px 0px;}
+#cell8 {border-width: 5px 5px 0px 5px;}
+#cell9 {border-width: 5px 0px 0px 5px;}
+
+.winner {
+    color: #efdfc5;
+    cursor: default;
+}
